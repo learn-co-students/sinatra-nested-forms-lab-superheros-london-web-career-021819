@@ -1,3 +1,9 @@
 
+<h1><%= params['team']['name'] %></h1>
+<h2>Team Motto: <%= params['team']['motto'] %></h2>
 
-
+<% params['team']['heroes'].each do |hero| %>
+  <h3>Hero Name: <%= hero['name'] %></h3>
+  <h5>Hero Power: <%= hero['power'] %></<h5>
+  <h5>Hero Biography: <%= hero['biography'] %></h5>
+<% end %>
